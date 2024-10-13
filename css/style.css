@@ -1,0 +1,841 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    font-family: "Poppins", system-ui;
+    margin: 0;
+}
+
+.container {
+    width: 900px;
+    max-width: 90vw;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+    transition: transform .5s;
+}
+
+svg {
+    width: 30px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+header .icon-cart {
+    position: relative;
+}
+
+header .icon-cart span {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+}
+
+header ul>li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header ul>li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: hsl(0, 0%, 3%);
+    display: block;
+    margin-right: 20px;
+    /* Add space between each link */
+}
+
+ul li .fa-chevron-down {
+    margin-right: 2px;
+    /* ลดระยะห่างให้ชิดกับคำว่า Home */
+}
+
+
+/* การจัดการเมนูหลัก */
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+ul li {
+    position: relative;
+    margin-right: 20px;
+    /* เพิ่มช่องว่างระหว่างเมนู */
+}
+
+ul li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: hsl(0, 0%, 3%);
+    display: block;
+    padding: 10px;
+}
+
+
+/* เมนูย่อย (dropdown) */
+
+ul li .sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+    padding: 0;
+    z-index: 1000;
+    width: 200px;
+    /* ขยายขนาดความกว้างของเมนูย่อยให้ใหญ่ขึ้น */
+    border-radius: 4px;
+}
+
+ul li .sub-menu li a {
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: hsl(0, 0%, 3%);
+    background-color: white;
+}
+
+ul li .sub-menu li a:hover {
+    background-color: hsl(0, 0%, 90%);
+    /* เปลี่ยนสีพื้นหลังเมื่อวางเมาส์ */
+}
+
+
+/* แสดงเมนูย่อยเมื่อวางเมาส์ */
+
+ul li:hover .sub-menu {
+    display: block;
+}
+
+.listProduct .item img {
+    width: 90%;
+    filter: drop-shadow(0 50px 20px rgba(128, 124, 124, 0.6));
+}
+
+.listProduct {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.listProduct .item {
+    background-color: #eeeee6;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.listProduct .item h2 {
+    font-weight: 500;
+    font-size: large;
+}
+
+.listProduct .item .price {
+    font-size: small;
+}
+
+.listProduct .item button {
+    background-color: #ffff04;
+    color: #eee;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.cartTab {
+    width: 400px;
+    background-color: #353432;
+    color: #eee;
+    position: fixed;
+    /* top: 0;
+    right: 0;
+    bottom: 0; */
+    inset: 0 -400px 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+}
+
+body.showCart .cartTab {
+    inset: 0 0 0 auto;
+}
+
+body.showCart .container {
+    transform: translateX(-250px);
+}
+
+.cartTab h1 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+
+.cartTab .btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cartTab .btn button {
+    background-color: #f54f39;
+    border: none;
+    font-family: "Poppins";
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.cartTab .btn .close {
+    background-color: #eee;
+}
+
+.cartTab .listCart .item img {
+    width: 100%;
+}
+
+.cartTab .listCart .item {
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.listCart .quantity span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+    color: #555;
+    border-radius: 50%;
+}
+
+.listCart .quantity span:nth-child(2) {
+    background-color: transparent;
+    color: #eee;
+}
+
+.listCart .item:nth-child(even) {
+    background-color: #eee1;
+}
+
+.listCart {
+    overflow: auto;
+}
+
+.listCart::-webkit-scrollbar {
+    width: 0;
+}
+
+.minus,
+.plus {
+    cursor: pointer;
+    /* ทำให้เมาส์เป็นรูปชี้ */
+}
+
+.minus {
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/* การจัดตำแหน่งไอคอนตะกร้าและปุ่มสามขีด */
+
+
+/* .header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    position: relative; 
+}
+
+ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.icon-cart {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+*/
+
+.menu-toggle {
+    display: none;
+}
+
+
+/*  */
+
+.data-box {
+    background-color: #f9f9f9;
+    /* สีพื้นหลัง */
+    border-radius: 10px;
+    /* มุมกลม */
+    padding: 20px;
+    /* ระยะห่างภายใน */
+    margin: 20px 0;
+    /* ระยะห่างด้านบนและด้านล่าง */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* เงาให้ดูมีมิติ */
+}
+
+.data-box h2 {
+    font-size: 24px;
+    /* ขนาดตัวอักษรของหัวข้อ */
+    margin-bottom: 10px;
+    /* ระยะห่างด้านล่าง */
+    color: #141413;
+    /* สีของหัวข้อ */
+}
+
+.data-box p {
+    font-size: 16px;
+    /* ขนาดตัวอักษรของเนื้อหา */
+    line-height: 1.5;
+    /* ระยะห่างระหว่างบรรทัด */
+    color: #555;
+    /* สีของเนื้อหา */
+    margin-bottom: 15px;
+    /* ระยะห่างด้านล่างของพารากราฟ */
+}
+
+.data-box form {
+    margin-top: 20px;
+    /* ระยะห่างด้านบนของฟอร์ม */
+}
+
+.data-box label {
+    display: block;
+    /* ทำให้ label แสดงในรูปแบบบล็อก */
+    margin-bottom: 5px;
+    /* ระยะห่างด้านล่าง */
+    font-weight: bold;
+    /* ทำให้ตัวหนา */
+}
+
+.data-box input,
+.data-box textarea {
+    width: 100%;
+    /* ให้เต็มความกว้าง */
+    padding: 10px;
+    /* ระยะห่างภายใน */
+    border: 1px solid #ccc;
+    /* ขอบ */
+    border-radius: 5px;
+    /* มุมกลม */
+    margin-bottom: 15px;
+    /* ระยะห่างด้านล่าง */
+}
+
+.data-box button {
+    background-color: #f5f500;
+    /* สีพื้นหลังของปุ่ม */
+    color: #fff;
+    /* สีตัวอักษร */
+    padding: 10px 15px;
+    /* ระยะห่างภายใน */
+    border: none;
+    /* ไม่มีขอบ */
+    border-radius: 5px;
+    /* มุมกลม */
+    cursor: pointer;
+    /* เปลี่ยนเคอร์เซอร์ */
+}
+
+.data-box button:hover {
+    background-color: #363636;
+    /* เปลี่ยนสีเมื่อวางเมาส์ */
+}
+
+
+/*  */
+
+.product-showcase {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    /* ระยะห่างด้านบน */
+}
+
+.product-block {
+    flex: 1;
+    /* ทำให้บล็อกสินค้าแต่ละอันมีความกว้างเท่ากัน */
+    margin: 0 10px;
+    /* ระยะห่างด้านข้าง */
+    padding: 15px;
+    /* ระยะห่างภายใน */
+    border: 1px solid #ccc;
+}
+
+.listProduct a {
+    color: black;
+    /* เปลี่ยนสีตัวหนังสือเป็นสีดำ */
+    text-decoration: none;
+    /* ไม่มีเส้นใต้ */
+}
+
+.listProduct a:hover {
+    text-decoration: underline;
+    /* เพิ่มเส้นใต้เมื่อเมาส์ชี้ไปที่ลิงค์ */
+}
+/* 9i'oxcx */
+.product-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.image-box {
+    position: relative;
+    width: 400px;
+    height: auto;
+    /* ปรับให้กล่องรองรับความสูงตามเนื้อหา */
+}
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.thumbnail-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.thumbnail {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.thumbnail:hover {
+    border-color: #000;
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.info-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.add-to-cart {
+    padding: 10px 20px;
+    background-color: #565756;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #525252;
+}
+/* sadasd */
+
+.details-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.data-box-2 {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.data-box-2 h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.data-box-2 p {
+    margin-bottom: 15px;
+    font-size: 1em;
+    color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-column h3,
+.footer-column-icon h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.footer-column p,
+.footer-column-icon a {
+    color: #ccc;
+}
+
+.footer-column-icon {
+    justify-self: center;
+}
+
+.footer-column-icon ul {
+    display: flex;
+    justify-content: flex-start;
+    /* จัดให้อยู่ตรงกลาง */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-column-icon ul li {
+    margin: 0 2px;
+    /* ลดระยะห่างระหว่างไอคอน */
+}
+
+.footer-column-icon a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-column-icon img {
+    width: 40px;
+    height: 40px;
+}
+.checkOut a{
+    text-decoration: none; /* ไม่ให้มีเส้นใต้ */
+    color: #ffffff;
+}
+
+
+
+/* ตอบสนองหน้าจอเล็ก (น้อยกว่า 991px) */
+
+@media (max-width: 991px) {
+    /* การจัดตำแหน่งไอคอนตะกร้าและปุ่มสามขีด */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    ul {
+        display: none;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .icon-cart {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    .menu-toggle {
+        display: none;
+        font-size: 35px;
+        cursor: pointer;
+        margin-left: 20px;
+    }
+    .menu-toggle {
+        display: block;
+        /* แสดงปุ่มสามขีด */
+    }
+    ul.active {
+        display: block;
+        /* แสดงเมนูเมื่อปุ่มสามขีดถูกคลิก */
+        position: absolute;
+        background-color: #fff;
+        right: 0;
+        top: 80px;
+        width: 100%;
+        z-index: 1000;
+    }
+    ul {
+        display: none;
+        /* ซ่อนเมนูในหน้าจอเล็ก */
+    }
+    .icon-cart {
+        margin-left: auto;
+    }
+    .menu-toggle.active+ul {
+        display: block;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        z-index: 1000;
+    }
+    li {
+        padding: 10px 10px;
+        width: 100%;
+        /* กำหนดระยะห่างให้กับรายการเมนู */
+    }
+    li:hover {
+        background-color: #f0f0f0;
+        /* เปลี่ยนสีเมื่อวางเมาส์ */
+    }
+}
+
+@media (max-width: 991px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        /* เปลี่ยนให้เป็นคอลัมน์เดียว */
+        gap: 15px;
+        /* ปรับระยะห่างระหว่างบล็อก */
+        text-align: center;
+        /* จัดข้อความให้ตรงกลาง */
+    }
+    .footer-column-icon ul {
+        flex-direction: row;
+        /* เรียงไอคอนในแนวนอน */
+        justify-content: center;
+        /* ชิดกลาง */
+    }
+    .footer-column-icon ul li {
+        margin: 0 0px;
+        /* ระยะห่างระหว่างไอคอน */
+    }
+    .footer-column h3,
+    .footer-column-icon h3 {
+        font-size: 1.2em;
+        /* ปรับขนาดตัวอักษร */
+    }
+}
+/* Mobile */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    header ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .listProduct {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cartTab {
+        width: 100%;
+    }
+}
+
+/* Tablet */
+@media (min-width: 600px) and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .listProduct {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cartTab {
+        width: 350px;
+    }
+}
+
+/* Laptop */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .listProduct {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cartTab {
+        width: 400px;
+    }
+}
+
+/* Responsive Design */
+
+/* Mobile */
+@media (max-width: 600px) {
+    .product-section {
+        flex-direction: column; /* จัดเรียงในแนวตั้ง */
+        align-items: center; /* จัดชิดกลาง */
+    }
+
+    .image-box {
+        width: 100%; /* ปรับให้กว้างเต็มที่ */
+        height: auto; /* ความสูงปรับตามเนื้อหา */
+    }
+
+    .thumbnail-box {
+        justify-content: center; /* จัดกลาง */
+    }
+
+    .thumbnail {
+        width: 50px; /* ปรับขนาดเล็กลง */
+        height: 50px; /* ปรับขนาดเล็กลง */
+    }
+
+    .prev-btn,
+    .next-btn {
+        padding: 8px; /* ปรับขนาดปุ่ม */
+        font-size: 16px; /* ขนาดฟอนต์ลดลง */
+    }
+
+    .add-to-cart {
+        padding: 8px 16px; /* ปรับขนาดปุ่ม */
+    }
+}
+
+/* Tablet */
+@media (min-width: 601px) and (max-width: 768px) {
+    .product-section {
+        flex-direction: column; /* จัดเรียงในแนวตั้ง */
+        align-items: center; /* จัดชิดกลาง */
+    }
+
+    .image-box {
+        width: 80%; /* ปรับให้กว้างขึ้น */
+    }
+
+    .thumbnail {
+        width: 55px; /* ขนาดเล็กลง */
+        height: 55px; /* ขนาดเล็กลง */
+    }
+
+    .prev-btn,
+    .next-btn {
+        padding: 10px; /* ขนาดปุ่มปกติ */
+        font-size: 16px; /* ขนาดฟอนต์ปกติ */
+    }
+
+    
+}
+
+/* Laptop */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .product-section {
+        flex-direction: row; /* กลับไปจัดเรียงในแนวนอน */
+        align-items: flex-start; /* จัดชิดซ้าย */
+    }
+
+    .image-box {
+        width: 350px; /* ขนาดปกติ */
+    }
+
+    .thumbnail {
+        width: 60px; /* ขนาดปกติ */
+        height: 60px; /* ขนาดปกติ */
+    }
+
+    .prev-btn,
+    .next-btn {
+        padding: 10px; /* ขนาดปกติ */
+        font-size: 18px; /* ขนาดฟอนต์ปกติ */
+    }
+
+    .add-to-cart {
+        padding: 10px 20px; /* ขนาดปกติ */
+        
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+    .product-section {
+        flex-direction: row; /* จัดเรียงในแนวนอน */
+        justify-content: space-between; /* จัดให้มีระยะห่าง */
+    }
+
+    .image-box {
+        width: 400px; /* ขนาดปกติ */
+    }
+
+    .thumbnail {
+        width: 60px; /* ขนาดปกติ */
+        height: 60px; /* ขนาดปกติ */
+    }
+
+    .prev-btn,
+    .next-btn {
+        padding: 10px; /* ขนาดปกติ */
+        font-size: 18px; /* ขนาดฟอนต์ปกติ */
+    }
+
+    .add-to-cart {
+        padding: 10px 20px; /* ขนาดปกติ */
+    }
+}
+
+
+
+
+

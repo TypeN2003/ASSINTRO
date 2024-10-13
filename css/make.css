@@ -1,0 +1,281 @@
+/* กล่องสรุปคำสั่งซื้อ */
+.checkout-container {
+    max-width: 800px; /* ขนาดสูงสุดของกล่อง */
+    margin: 0 auto; /* จัดให้อยู่กลาง */
+    padding: 20px; /* ระยะขอบ */
+    border: 1px solid #ddd; /* ขอบ */
+    border-radius: 8px; /* มุมมน */
+    background-color: #f9f9f9; /* สีพื้นหลัง */
+}
+
+/* รายละเอียดสรุปคำสั่งซื้อ */
+.order-summary {
+    max-height: 300px; /* ความสูงสูงสุดที่ต้องการ */
+    overflow-y: auto; /* เปิดให้เลื่อนเมื่อมีเนื้อหามาก */
+    margin-top: 20px; /* ระยะห่างจากหัวข้อ */
+    border: 1px solid #ddd; /* ขอบของกล่องสินค้าสำหรับมองเห็น */
+    border-radius: 5px; /* มุมมน */
+    padding: 10px; /* ระยะขอบ */
+}
+
+/* รายการสินค้าที่อยู่ในตะกร้า */
+.cart-items {
+    display: flex;
+    flex-direction: column; /* จัดเรียงในแนวตั้ง */
+}
+
+/* รายละเอียดของสินค้าในตะกร้า */
+.item {
+    display: flex; /* ใช้ flexbox เพื่อจัดตำแหน่ง */
+    align-items: center; /* จัดให้แนวนอนกลาง */
+    border-bottom: 1px solid #ddd; /* ขอบล่าง */
+    padding: 10px 0; /* ระยะขอบ */
+}
+
+/* รูปภาพของสินค้า */
+.image {
+    flex: 0 0 100px; /* ความกว้างคงที่สำหรับรูปภาพ */
+}
+
+.image img {
+    width: 100%; /* ให้ภาพเต็มขนาดกล่อง */
+    height: auto; /* ให้ภาพปรับขนาดอัตโนมัติ */
+    border-radius: 5px; /* มุมมนของภาพ */
+}
+
+/* ชื่อสินค้า */
+.name {
+    flex: 1; /* ให้พื้นที่ที่เหลือสำหรับชื่อสินค้า */
+    padding-left: 10px; /* ระยะขอบด้านซ้าย */
+}
+
+/* ราคา */
+.totalprice {
+    flex: 0 0 100px; /* ความกว้างคงที่สำหรับราคา */
+    text-align: right; /* จัดให้ชิดขวา */
+}
+
+/* ปริมาณสินค้า */
+.quantity {
+    display: flex; /* ใช้ flexbox */
+    align-items: center; /* จัดให้แนวนอนกลาง */
+    margin-left: 10px; /* ระยะขอบด้านซ้าย */
+    gap: 10px;
+}
+
+/* ปุ่มเพิ่ม-ลด จำนวนสินค้า */
+.minus,
+.plus {
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็นมือเมื่อชี้ */
+    padding: 5px 5px; /* ระยะขอบ */
+    background-color: #007bff; /* สีพื้นหลัง */
+    color: white; /* สีตัวอักษร */
+    border: none; /* ไม่มีขอบ */
+    border-radius: 5px; /* มุมมน */
+}
+
+.minus:hover,
+.plus:hover {
+    background-color: #0056b3; /* เปลี่ยนสีเมื่อชี้ */
+}
+
+
+
+.shipping,
+.total-price,
+.payment-method,
+.summary-total {
+    margin-top: 10px;
+}
+
+.payment-method button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #424242;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.confirm-order {
+    background-color: #424242;
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.confirm-order:hover {
+    background-color: #333333;
+}
+
+
+/* ปิดการแสดงโมดอลเริ่มต้น */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* สไตล์เนื้อหาโมดอล */
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.modal-content h2 {
+    margin-bottom: 15px;
+}
+
+#closeModalBtn {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#closeModalBtn:hover {
+    background-color: #000000;
+}
+
+
+
+
+/* Responsive Design */
+
+/* Mobile */
+@media (max-width: 600px) {
+    .checkout-container {
+        padding: 10px; /* ระยะขอบลดลง */
+        height: 600px;
+    }
+
+    .order-summary {
+        max-height: 480px; /* ความสูงลดลง */
+    }
+
+    .item {
+        flex-direction: column; /* จัดเรียงในแนวตั้ง */
+        align-items: flex-start; /* จัดชิดซ้าย */
+    }
+
+    .image {
+        flex: 0 0 80px; /* ความกว้างสำหรับรูปภาพลดลง */
+    }
+
+    .totalprice {
+        flex: 0 0 80px; /* ความกว้างสำหรับราคา */
+    }
+
+    .quantity {
+        gap: 5px; /* ระยะห่างลดลง */
+    }
+
+    .payment-method button
+     {
+        width: 70%; /* ทำให้ปุ่มกว้างเต็มที่ */
+    }
+    .confirm-order{
+        width: 100%;
+    }
+    
+}
+
+/* Tablet */
+@media (min-width: 600px) and (max-width: 768px) {
+    .checkout-container {
+        padding: 15px; /* ระยะขอบลดลง */
+    }
+
+    .order-summary {
+        max-height: 250px; /* ความสูงลดลง */
+    }
+
+    .item {
+        flex-direction: row; /* จัดเรียงในแนวนอน */
+    }
+
+    .image {
+        flex: 0 0 90px; /* ความกว้างสำหรับรูปภาพ */
+    }
+
+    .totalprice {
+        flex: 0 0 90px; /* ความกว้างสำหรับราคา */
+    }
+
+    .quantity {
+        gap: 8px; /* ระยะห่างลดลง */
+    }
+
+    .payment-method button,
+    .confirm-order {
+        width: auto; /* ปรับให้ปุ่มมีความกว้างอัตโนมัติ */
+    }
+}
+
+/* Laptop */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .checkout-container {
+        padding: 20px; /* ระยะขอบปกติ */
+    }
+
+    .order-summary {
+        max-height: 300px; /* ความสูงสูงสุดที่ต้องการ */
+    }
+
+    .item {
+        flex-direction: row; /* จัดเรียงในแนวนอน */
+    }
+
+    .image {
+        flex: 0 0 100px; /* ความกว้างคงที่สำหรับรูปภาพ */
+    }
+
+    .totalprice {
+        flex: 0 0 100px; /* ความกว้างคงที่สำหรับราคา */
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .checkout-container {
+        padding: 20px; /* ระยะขอบปกติ */
+    }
+
+    .order-summary {
+        max-height: 300px; /* ความสูงสูงสุดที่ต้องการ */
+    }
+
+    .item {
+        flex-direction: row; /* จัดเรียงในแนวนอน */
+    }
+
+    .image {
+        flex: 0 0 100px; /* ความกว้างคงที่สำหรับรูปภาพ */
+    }
+
+    .totalprice {
+        flex: 0 0 100px; /* ความกว้างคงที่สำหรับราคา */
+    }
+}
+
