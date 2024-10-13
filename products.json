@@ -1,0 +1,59 @@
+[
+    {
+        "id":1,
+        "name":"หม้อไฟฟ้าอเนกประสงค์",
+        "price": 699,
+        "image": "image/รูปที่1.1.webp",
+        "link":"C1-1.html"
+    },
+    {
+        "id":2,
+        "name":"พัดลมใบพัดพลาสติก 16นิ้ว",
+        "price": 1000,
+        "image": "image/รูปที่2.1.webp",
+        "link":"C1-2.html"
+    },
+    {
+        "id":3,
+        "name":"เตารีดแห้ง รุ่น HD-198-A",
+        "price": 689,
+        "image": "image/3.1.webp",
+        "link":"C1-3.html"
+    },
+    {
+        "id":4,
+        "name":"กาน้ำร้อนไฟฟ้าความจุ 2 ลิตร ",
+        "price": 699,
+        "image": "image/กาน้ำร้อน4.1.webp",
+        "link":"C1-4.html"
+    },
+    {
+        "id":5,
+        "name":"หม้อต้มไฟฟ้า รุ่น KW-209 ",
+        "price": 1000,
+        "image": "image/หม้อต้มไฟฟ้า5.1.webp",
+        "link":"C1-5.html"
+    },
+    {
+        "id":6,
+        "name":"เครื่องดูดฝุ่นไร้สาย X9 Premium",
+        "price": 1990,
+        "image": "image/เครื่องดูดฝุ่นรูปที่6.1.webp",
+        "link":"C1-6.html"
+    },
+    {
+        "id":7,
+        "name":"หม้อทอดไร้น้ํามันSimplus",
+        "price": 550,
+        "image": "image/หม้อทอดรูปที่7.1.webp",
+        "link":"C1-7.html"
+    },
+    {
+        "id":8,
+        "name":"เครื่องฟอกอากาศ LG PuriCare 360 Hit ",
+        "price": 1000,
+        "image": "image/เครื่องฟอกอากาศรูปที่8.1.webp",
+        "link":"C1-8.html"
+    }
+   
+]

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body class="">
+    <div class="container">
+        <header>
+            <div class="title">NON & NICK Shop</div>
+            <ul>
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li class="dropdown">
+
+                    <a href="#"> ประเภทสินค้า <i class="fa-solid fa-chevron-down"></i></a>
+                    <ul class="sub-menu sub-menu-right">
+                        <li><a href="Clothing.html"><span>เครื่องใช้ไฟฟ้า</span></a></li>
+                        <li><a href="electronics.html"><span>สินค้าIT</span></a></li>
+                        <li><a href="A.html"><span>อุปกรณ์เครื่องมือช่าง</span></a></li>
+
+                    </ul>
+                </li>
+                <li><a href="Make payment.html">ชำระเงิน</a></li>
+                
+            </ul>
+            <div class="icon-cart">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+                </svg>
+                <span>0</span>
+            </div>
+            <div class="menu-toggle">&#9776;</div>
+            <!-- ปุ่มสามขีด -->
+        </header>
+
+        <div class="product-section">
+            <div class="image-box">
+                <button class="prev-btn">&#8249;</button>
+                <!-- ปุ่มก่อนหน้า -->
+                <img src="image/โทรศัพท์รูปที่2.2.1.webp" alt="Product Image" id="mainImage">
+                <button class="next-btn">&#8250;</button>
+                <!-- ปุ่มถัดไป -->
+
+                <!-- รูปขนาดย่อ -->
+                <div class="thumbnail-box">
+                    <img src="image/โทรศัพท์รูปที่2.2.1.webp" alt="Thumbnail 1" class="thumbnail" data-image="image/โทรศัพท์รูปที่2.2.1.webp">
+                    <img src="image/โทรศัพท์รูปที่2.2.2.webp" alt="Thumbnail 2" class="thumbnail" data-image="image/โทรศัพท์รูปที่2.2.2.webp">
+                    <img src="image/โทรศัพท์รูปที่2.2.3.webp" alt="Thumbnail 3" class="thumbnail" data-image="image/โทรศัพท์รูปที่2.2.3.webp">
+                    <img src="image/โทรศัพท์รูปที่2.2.4.webp" alt="Thumbnail 4" class="thumbnail" data-image="image/โทรศัพท์รูปที่2.2.4.webp">
+                    <img src="image/โทรศัพท์รูปที่2.2.5.webp" alt="Thumbnail 5" class="thumbnail" data-image="image/โทรศัพท์รูปที่2.2.5.webp">
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h2>ชื่อสินค้า</h2>
+                <p>Apple iPhone 15 เครื่องศูนย์เเท้รับประกัน1ปีทางเราสินค้าเฉพาะสีpinkเท่านั้น!</p>
+                <p>ราคา: 25000 บาท</p>
+                <button class="add-to-cart" onclick="ADDCART('9')">เพิ่มลงตระกร้า</button>
+            </div>
+        </div>
+    </div>
+    <!-- กล่องเก็บข้อมูลอีกกล่อง -->
+    <div class="data-box-2">
+        <h2>รายละเอียดสินค้า</h2>
+        <p>คุณสมบัติหลัก</p>
+        <p>- Dynamic Island จะเด้งการเตือนและกิจกรรมสดขึ้นมา </p>
+        <p>- ดีไซน์สุดล้ำ แบบกระจกแต่งสีและอะลูมิเนียมที่ทนทาน ทนน้ำ น้ำที่กระเด็นใส่ และฝุ่น ส่วนด้านหน้าแบบ Ceramic Shield แข็งแรงกว่ากระจกไหนๆ บนสมาร์ทโฟน</p>
+        <p>- จอภาพ Super Retina XDR ขนาด 6.1นิ้ว สว่างขึ้นสูงสุด 2 เท่าในเวลาที่อยู่กลางแดดเมื่อเทียบกับ iPhone 14</p>
+        <p>- กล้องหลัก 48MP พร้อมเทเลโฟโต้ 2 เท่า สามารถถ่ายภาพที่มีความละเอียดสูงเป็นพิเศษ ยิ่งกว่าที่เคยที่จะถ่ายภาพที่ทั้งสวยโดดเด่นและมีรายละเอียดที่ยอดเยี่ยม และยังมีเทเลโฟโต้ 2 เท่า คุณภาพระดับออปติคัลที่ให้คุณจัด เฟรมภาพระยะใกล้ได้อย่างลงตัวอีกด้วย</p>
+        <p>- ถ่ายภาพบุคคลที่มีรายละเอียดและสีสันสวยสะดุดตายิ่งขึ้น เพียงแค่แตะก็สามารถสลับจุดโฟกัส ระหว่างตัวแบบได้ แม้ว่าคุณจะกดถ่ายไปแล้วก็ตาม</p>
+        <p>- ชิป A16 Bionic ชิปที่เร็วสุดแรงพร้อมขับเคลื่อนคุณสมบัติต่างๆ อย่างการประมวลภาพถ่ายเชิงคำนวณ, Dynamic Island ที่ปรับเปลี่ยนอย่างลื่นไหล และการแยกเสียงสำหรับการโทร นอกจากนี้ชิป A16 Bionic ยังทรงประสิทธิภาพเหลือเชื่อ และช่วยให้แบตเตอรี่ใช้งานได้นานอย่างยอดเยี่ยมตลอดวัน</p>
+        <p>- การเชื่อมต่อ USB-C </p>
+        <p>- ช่องต่อ USB-C ให้คุณชาร์จ Mac หรือ iPad ด้วยสายชาร์จเส้นเดียวกับที่คุณใช้ชาร์จ iPhone 15 แถมยังใช้ iPhone 15 เพื่อชาร์จ Apple Watch หรือ AirPods ได้ด้วย </p>
+        <p>- iPhone ทุกเครื่องมาพร้อมกับการรับประกันแบบจำกัดที่มีระยะเวลา 1 ปี ข้อความทางกฎหมาย </p>
+        <p>1.iPhone 15 Series มีความสามารถในการทนน้ำ น้ำที่กระเด็นใส่ และฝุ่น ซึ่งผ่านการทดสอบตามหลักเกณฑ์ของห้องปฏิบัติการที่ได้รับการควบคุมที่ระดับ IP68 ตามมาตรฐาน IEC 60529 (ความลึกไม่เกิน 6 เมตร ภายในระยะเวลาสูงสุด 30 นาที) ความสามารถในการทนน้ำที่กระเด็นใส่
+            และฝุ่นจะไม่คงอยู่ถาวร ซึ่งความสามารถดังกล่าวอาจลดลงจากการใช้งานตามปกติ ห้ามชาร์จ iPhone ในขณะที่เครื่องยังเปียกอยู่ การรับประกันไม่ครอบคลุมความเสียหายที่เกิดจากของเหลว<br> 2.จอภาพมีมุมมน และเมื่อวัดเป็นรูปสี่เหลี่ยมมุมฉากมาตรฐานแล้ว หน้าจอจะมีขนาด
+            6.12 นิ้ว (iPhone 15 Pro, iPhone 15) หรือ 6.69 นิ้ว (iPhone 15 Pro Max, iPhone 15 Plus) ในแนวทแยง พื้นที่สำหรับการดูจริงมีขนาดน้อยกว่า <br> 4.ต้องใช้กับสาย USB 3 ที่มีความเร็ว 10Gb/s จึงจะถ่ายโอนข้อมูลได้เร็วขึ้นสูงสุด 20 เท่าบน iPhone 15
+            Pro<br> 5.Wi-Fi 6E สามารถใช้งานได้ในประเทศและภูมิภาคที่รองรับ <br> 6.iPhone 15 และ iPhone 15 Pro สามารถตรวจจับเหตุรถชนอย่างรุนแรง และจะโทรขอความช่วยเหลือให้คุณ ต้องใช้การเชื่อมต่อ ระบบเซลลูลาร์หรือการโทรผ่าน Wi-Fi</p>
+
+
+    </div>
+
+    <!-- กล่องเก็บข้อมูล -->
+    <div class="data-box">
+        <h2>ข้อมูลสินค้า</h2>
+        <p>
+            มีอีกหลายองค์ประกอบที่สำคัญสำหรับการใช้งานคอมพิวเตอร์นอกจากเมาส์และคีย์บอร์ด พวกเรารวบรวมอุปกรณ์คอมพิวเตอร์ที่ขายดีที่สุดมาไว้ที่นี่ มีทั้งโทรศัพท์ มือถือ iphone ipad noetbook ไปจนถึงอุปกรณ์ คีบอร์ด เมาส์ ให้คอมพิวเตอร์เครื่องสำคัญ อุปกรณ์ทนทานรับประกันสินค้าข้อเเท้เเน่นอน
+        </p>
+
+
+
+    </div>
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart">
+            <div class="item">
+                <div class="image">
+                    <img src="image/3.webp" alt="">
+                </div>
+                <div class="name">
+                    name
+                </div>
+                <div class="toalprice">
+                    200B
+                </div>
+                <div class="quantity">
+                    <span class="minus"><</span>
+                    <span>1</span>
+                    <span class="plus">></span>
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            <button class="close">ปิดตระกร้า</button>
+            <button class="checkOut"><a href="clothing copy.html">ชำระเงิน</a></button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
+                </p>
+            </div>
+            <div class="footer-column-icon">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li>
+                        <a href="#"><img src="image_icon/fa.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="image_icon/line.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="image_icon/twitter.png" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <p>Email: info@example.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/C1-1.js"></script>
+    
+    <script src="js/script.js"></script>
+    <!-- เชื่อมต่อไฟล์ JavaScript -->
+
+</body>
+
+</html>
+<div class="listCart">
+    <script type="module">
+        import { getCartData, displayCart } from './cart.js'; const listCartHTML = document.querySelector('.listCart'); // ดึงข้อมูลตะกร้าและแสดงผล const initCart = () => { const carts = getCartData(); displayCart(listCartHTML); } initCart();
+    </script>
+</div>
+</body>
+
+</html>

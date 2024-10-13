@@ -1,0 +1,58 @@
+[
+    {
+        "id":17,
+        "name":"หัวแร้งปืนเร่งความร้อน SUMO 981 130 วัตต์ ",
+        "price": 150,
+        "image": "image/หัวเเร้ง1.webp",
+        "link":"A1-1.html"
+    },
+    {
+        "id":18,
+        "name":"ว่านไฟฟ้า  3/8 นิ้ว 450 วัตต์ ",
+        "price": 750,
+        "image": "image/สว่านไฟฟ้า1.webp",
+        "link":"A1-2.html"
+    },
+    {
+        "id":19,
+        "name":"เครื่องเชื่อม INVERTER MATALL PRO ",
+        "price": 2990,
+        "image": "image/เครื่องเชื่อม1.webp",
+        "link":"A1-3.html"
+    },
+    {
+        "id":20,
+        "name":"บันไดอะลูมิเนียมทรง A MATALL 8 ขั้น",
+        "price": 450,
+        "image": "image/บรรได1.webp",
+        "link":"A1-4.html"
+    },
+    {
+        "id":21,
+        "name":"เครื่องเจียร MAKITA  4 นิ้ว 850 วัตต์",
+        "price": 1500,
+        "image": "image/เครื่องเจียร1.webp",
+        "link":"A1-5.html"
+    },
+    {
+        "id":22,
+        "name":" คีมย้ำหางปลา MATALL 9 นิ้ว",
+        "price": 250,
+        "image": "image/คีม1.webp",
+        "link":"A1-6.html"
+    },
+    {
+        "id":23,
+        "name":"ชุดไขควง MATALL  แพ็ก 35 ชิ้น ",
+        "price": 250,
+        "image": "image/ไขควง1.webp",
+        "link":"A1-7.html"
+    },
+    {
+        "id":24,
+        "name":"ค้อนหงอน ด้ามไฟเบอร์ MATALL 16 ออนซ์",
+        "price": 175,
+        "image": "image/ค้อน1.webp",
+        "link":"A1-8.html"
+    }
+]

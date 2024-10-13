@@ -1,0 +1,58 @@
+[
+    {
+        "id":9,
+        "name":"iphone15 สี pink เท่านั้น!",
+        "price": 25000,
+        "image": "image/โทรศัพท์รูปที่2.2.1.webp",
+        "link":"e1-1.html"
+    },
+    {
+        "id":10,
+        "name":"MSI Thin 15 B12UCX-1428TH ",
+        "price": 25000,
+        "image": "image/โน็ตบุครูปที่1.webp",
+        "link":"e1-2.html"
+    },
+    {
+        "id":11,
+        "name":"คีย์บอร์ด IWACHI คีย์บอร์ดไฟ RGB",
+        "price": 1990,
+        "image": "image/คีบอร์ด1.webp",
+        "link":"e1-3.html"
+    },
+    {
+        "id":12,
+        "name":"เมาส์ไร้สาย เมาส์Logitech M330",
+        "price": 1090,
+        "image": "image/เมาส์รูปที่1.webp",
+        "link":"e1-4.html"
+    },
+    {
+        "id":13,
+        "name":"HyperX QuadCast Gaming",
+        "price": 1000,
+        "image": "image/ไมค์1.webp",
+        "link":"e1-5.html"
+    },
+    {
+        "id":14,
+        "name":" หูฟังเกมมิ่งไร้สาย ใช้งานBT",
+        "price": 1090,
+        "image": "image/หูฟัง1.webp",
+        "link":"e1-6.html"
+    },
+    {
+        "id":15,
+        "name":"RTX 4060 Ti ELITE 8G ",
+        "price": 12000,
+        "image": "image/gpu1.webp",
+        "link":"e1-7.html"
+    },
+    {
+        "id":16,
+        "name":"เคส Jonsbo D40 ปลอกอลูมิเนียมแชสซี",
+        "price": 4990,
+        "image": "image/case1.webp",
+        "link":"e1-8.html"
+    }
+]
